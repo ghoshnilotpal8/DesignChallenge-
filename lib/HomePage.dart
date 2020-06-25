@@ -648,50 +648,58 @@ class _HomePageState extends State<HomePage> {
                 padding: const EdgeInsets.fromLTRB(10.0, 20.0,5.0,0.0),
                 child: Row(
                   children: <Widget>[
-                    Text("Your Bag" ,style: TextStyle(fontSize: 25.0, fontWeight: FontWeight.bold, color: Colors.white)),
-                    Container(
-                      margin: EdgeInsets.only(left: 200.0),
-                      child: Row(
-                        children: <Widget>[
-                          Stack(
-                            children: <Widget>[
-                             Image.asset("assets/plate1.png", height: 45.0,width: 45.0),
-                             Positioned(
-                               left: 20.0,
-                               child: Container(
-                                 decoration: BoxDecoration(
-                                   borderRadius: BorderRadius.circular(50.0),
-                                   color: Colors.yellow
-                                ),
-                                 child: Padding(
-                                   padding: const EdgeInsets.all(6.0),
-                                   child: Text('2', style: TextStyle(fontSize: 15.0),),
-                                 ),
-                               ),
-                             )
-                            ],
-                          ),
+                    Expanded(flex: 7 ,child: Text("Your Bag" ,style: TextStyle(fontSize: 25.0, fontWeight: FontWeight.bold, color: Colors.white))),
+                    Expanded(
+                      flex: 3,
+                      child: Container(
+                        child: Row(
+                          children: <Widget>[
+                            Expanded(
+                              flex: 1,
+                              child: Stack(
+                                children: <Widget>[
+                                 Image.asset("assets/plate1.png", height: 45.0,width: 45.0),
+                                 Positioned(
+                                   left: 20.0,
+                                   child: Container(
+                                     decoration: BoxDecoration(
+                                       borderRadius: BorderRadius.circular(50.0),
+                                       color: Colors.yellow
+                                    ),
+                                     child: Padding(
+                                       padding: const EdgeInsets.all(6.0),
+                                       child: Text('2', style: TextStyle(fontSize: 15.0),),
+                                     ),
+                                   ),
+                                 )
+                                ],
+                              ),
+                            ),
 
-                          Stack(
-                            children: <Widget>[
-                             Image.asset("assets/plate5.png", height: 45.0,width: 45.0),
-                             Positioned(
-                               left: 20.0,
-                               child: Container(
-                                 decoration: BoxDecoration(
-                                   borderRadius: BorderRadius.circular(50.0),
-                                   color: Colors.yellow
-                                ),
-                                 child: Padding(
-                                   padding: const EdgeInsets.all(6.0),
-                                   child: Text('4', style: TextStyle(fontSize: 15.0),),
-                                 ),
-                               ),
-                             )
-                            ],
-                          ),
+                            Expanded(
+                              flex: 1,
+                              child: Stack(
+                                children: <Widget>[
+                                 Image.asset("assets/plate5.png", height: 45.0,width: 45.0),
+                                 Positioned(
+                                   left: 20.0,
+                                   child: Container(
+                                     decoration: BoxDecoration(
+                                       borderRadius: BorderRadius.circular(50.0),
+                                       color: Colors.yellow
+                                    ),
+                                     child: Padding(
+                                       padding: const EdgeInsets.all(6.0),
+                                       child: Text('4', style: TextStyle(fontSize: 15.0),),
+                                     ),
+                                   ),
+                                 )
+                                ],
+                              ),
+                            ),
 
-                        ],
+                          ],
+                        ),
                       ),
                     )
                   ],
